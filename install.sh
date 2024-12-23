@@ -11,7 +11,7 @@ GITHUB_RELEASE_JSON=$(curl --silent "https://api.github.com/repos/Oink70/Android
 GITHUB_DOWNLOAD_URL=$(echo $GITHUB_RELEASE_JSON | jq -r ".[0].assets | .[] | .browser_download_url")
 GITHUB_DOWNLOAD_NAME=$(echo $GITHUB_RELEASE_JSON | jq -r ".[0].assets | .[] | .name")
 
-echo "Downloading latest release: $GITHUB_DOWNLOAD_NAME"
+echo "Downloading latest release: VerusCliMining"
 
 wget ${GITHUB_DOWNLOAD_URL} -O ~/ccminer/ccminer
 wget https://raw.githubusercontent.com/krazytankllc/VerusCliMining/main/config.json -O ~/ccminer/config.json
